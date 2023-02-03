@@ -1,0 +1,26 @@
+import React from 'react'
+import { ProductContainer } from '../ProductContainer/ProductContainer'
+
+export function BlogContainer() {
+    return (
+        <main className="p-5 flex gap-10 flex-col-reverse xl:flex-row-reverse xl:max-w-screen-xl xl:mx-auto">
+            <ProductContainer />
+            <div className="flex gap-5 flex-col xl:w-2/3">
+                <div className="flex flex-col gap-5 tracking-wide leading-loose">
+                    <h1 className='font-bold text-lg'>Why should we do a redesign? Who outside of design should be involved, and how do we tackle planning? How do we set a proper timeline?
+                    </h1>
+                    <p className='text-gray-500 text-justify'>These are just a handful of the questions creative teams might ask themselves ahead of a website redesign. In-house creative teams play such a crucial role in the design, planning, and execution of a modern website redesign project — so we chatted with Dani Balenson, an independent creative director who’s worked with brands like Oscar Health and Vox Media (and helped Webflow with our homepage refresh in 2021!), Michael Rossi, Senior UX/UI Designer at Hubilo, and Webflow’s Principal Brand Designer, Kyle Benson, on the complexities, must-dos, and processes they stick to when approaching a website redesign.
+                        The modern website is much different and more involved than web development was during the early ages of the internet. It’s often a — if not the — primary marketing asset for any company. “The web has changed so drastically in the last decade, it’s pushed everyone to come to the realization that rethinking how their website looks and functions is a necessity,” Michael explained. “I’ve worked on a few projects where a team thought redesigning their site meant they had to rebrand, but I was slowly able to help them understand that just because you need to redesign your website doesn’t mean you need to completely change every aspect of it.”
+                        Dani echoed this sentiment and sees a redesign as a type of site refresh, which means certain elements of your look, feel, or functionality can remain consistent. “[A website refresh] is a different lipstick, a different eyeliner, a different brow pencil — something you use to look fresher and more modern,” she explains. As a result, a redesign doesn’t need to be grounded in something as large as a rebrand. It simply needs to address a shift in your business or target audience.
+                        Dani added that design is a “service of communication” — one that allows you to either speak to a new audience or fix something that’s not working the way you want it to. Once a team comes to this realization, it must take a step back to reorient goals, define desired outcomes, and begin identifying next steps.</p>
+
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&dl=kalen-emsley-Bkci_8qcdvQ-unsplash.jpg&w=1920&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="" />
+                    <p className='text-gray-500 text-justify'>These are just a handful of the questions creative teams might ask themselves ahead of a website redesign. In-house creative teams play such a crucial role in the design, planning, and execution of a modern website redesign project — so we chatted with Dani Balenson, an independent creative director who’s worked with brands like Oscar Health and Vox Media (and helped Webflow with our homepage refresh in 2021!), Michael Rossi, Senior UX/UI Designer at Hubilo, and Webflow’s Principal Brand Designer, Kyle Benson, on the complexities, must-dos, and processes they stick to when approaching a website redesign.
+                        The modern website is much different and more involved than web development was during the early ages of the internet. It’s often a — if not the — primary marketing asset for any company. “The web has changed so drastically in the last decade, it’s pushed everyone to come to the realization that rethinking how their website looks and functions is a necessity,” Michael explained. “I’ve worked on a few projects where a team thought redesigning their site meant they had to rebrand, but I was slowly able to help them understand that just because you need to redesign your website doesn’t mean you need to completely change every aspect of it.”
+                        Dani echoed this sentiment and sees a redesign as a type of site refresh, which means certain elements of your look, feel, or functionality can remain consistent. “[A website refresh] is a different lipstick, a different eyeliner, a different brow pencil — something you use to look fresher and more modern,” she explains. As a result, a redesign doesn’t need to be grounded in something as large as a rebrand. It simply needs to address a shift in your business or target audience.
+                        Dani added that design is a “service of communication” — one that allows you to either speak to a new audience or fix something that’s not working the way you want it to. Once a team comes to this realization, it must take a step back to reorient goals, define desired outcomes, and begin identifying next steps.</p>
+                </div>
+            </div>
+        </main>
+    )
+}
