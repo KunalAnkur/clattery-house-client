@@ -6,3 +6,5 @@ export * from "./ProductCard/ProductCard";
 export * from "./AvatarNamePlate/AvatarNamePlate";
 export * from "./Logo/Logo"
 export * from "./Footer/Footer"
+export * from "./ClatteryImage/ClatteryImage"
+export * from "./RichText/RichText"

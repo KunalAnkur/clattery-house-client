@@ -3,7 +3,7 @@ import React from 'react'
 import Profile from "../../assets/ProfilePhoto.jpg"
 export function AboutMeContainer() {
   return (
-    <main className='text-gray-700 p-5 xl:max-w-screen-xl xl:mx-auto gap-16 flex flex-col text-justify items-center lg:flex-row lg:items-start'>
+    <main className='text-gray-700 p-5 xl:max-w-screen-xl xl:mx-auto gap-16 flex flex-col text-justify items-center lg:flex-row lg:items-start min-h-screen'>
           <Image className='h-[500px] w-fit -hue-rotate-15 object-cover' width={200} height={200} src={Profile} alt="" />
 
             <div className='w-full backdrop-blur-md leading-loose tracking-wider lg:h-[800px]'>

@@ -1,8 +1,13 @@
+import { groq } from "next-sanity";
 import Head from "next/head"
+import { useState } from "react";
 import { Banner } from "../components"
 import { AboutMeContainer } from "../containers"
-
-function about() {
+import { sanityClient } from "../sanity";
+type Props = {
+    post: Post
+}
+export default function about({post}: Props) {
     return (
         <>
             <Head>
@@ -13,7 +18,7 @@ function about() {
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
 
-            <Banner bannerHeight="h-[300px]" adjustingHeight="h-[248px]">
+            <Banner mainImage={post.mainImage} bannerHeight="h-[300px]" adjustingHeight="h-[248px]">
                 <div className="text-4xl font-bold h-full text-white flex justify-center items-center p-5">
                     <h1 className="">About</h1>
                 </div>
@@ -23,4 +28,18 @@ function about() {
     )
 }
 
-export default about
+export const getStaticProps = async () => {
+    const query = groq`
+   *[_type == "post"][0]{
+  _id,
+  mainImage
+  }
+`;
+    const data = await sanityClient.fetch(query);
+    // if (!data) return { props: null, notFound: true }
+    return {
+        props: {
+            post: data
+        },
+    };
+};
