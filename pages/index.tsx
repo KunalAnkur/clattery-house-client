@@ -77,5 +77,6 @@ export const getStaticProps = async () => {
       categories: data.categories,
       trending: data.trending
     },
+    revalidate: 60
   };
 };

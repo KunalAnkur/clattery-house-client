@@ -1,6 +1,5 @@
 import { groq } from "next-sanity";
 import Head from "next/head"
-import { useState } from "react";
 import { Banner } from "../components"
 import { AboutMeContainer } from "../containers"
 import { sanityClient } from "../sanity";
