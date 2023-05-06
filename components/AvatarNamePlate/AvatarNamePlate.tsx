@@ -1,11 +1,16 @@
 import React from 'react'
+import { ClatteryImage } from '../ClatteryImage/ClatteryImage'
 
-export function AvatarNamePlate() {
+type Props = {
+    author: Author
+}
+
+export function AvatarNamePlate({author}: Props) {
     return (
         <div className='flex gap-5 items-center'>
-            <img className='w-12 h-12 object-cover rounded-full' src="https://techcrunch.com/wp-content/uploads/2022/12/lensa-ai-magic-avatar.jpg?w=1024" alt="" />
+            <ClatteryImage className='w-12 h-12 object-cover rounded-full' src={author.image} alt="" />
             <div>
-                <p className='font-bold text-lg'>Leah Retta</p>
+                <p className='font-bold text-lg'>{author.name}</p>
                 <p className='text-sm'>Content creators, reviewers</p>
             </div>
         </div>
