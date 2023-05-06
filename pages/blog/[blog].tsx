@@ -4,6 +4,7 @@ import React from 'react'
 import { Banner } from '../../components'
 import { BlogContainer, BlogPostHeaderContainer } from '../../containers'
 import { sanityClient } from '../../sanity'
+import { BlogSeoContainer } from '../../containers/'
 
 type Props = {
     post: Post
@@ -15,6 +16,7 @@ type Props = {
 function BlogPost({post} :Props) {
     return (
         <>
+            <BlogSeoContainer post={post}/>
             <Head>
                 <title>{post.title}</title>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -22,7 +24,6 @@ function BlogPost({post} :Props) {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
-
             <Banner mainImage={post.mainImage} bannerHeight="h-[550px] xl:h-[400px]" adjustingHeight='h-[498px] xl:h-[348px]'>
                 <BlogPostHeaderContainer post={post} />
             </Banner>

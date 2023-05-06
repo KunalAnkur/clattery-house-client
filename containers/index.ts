@@ -7,4 +7,5 @@ export * from "./CategoryPageContainer/CategoryPageContainer";
 export * from "./ProductContainer/ProductContainer";
 export * from "./BlogPostHeaderContainer/BlogPostHeaderContainer";
 export * from "./BlogContainer/BlogContainer";
-export * from "./AboutMeContainer/AboutMeContainer"
+export * from "./AboutMeContainer/AboutMeContainer";
+export * from "./BlogSeoContainer/BlogSeoContainer";

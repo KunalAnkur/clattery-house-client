@@ -7,7 +7,7 @@ import {
   GridContainer,
 } from "../containers";
 import { sanityClient } from "../sanity";
-
+import {BreadcrumbJsonLd} from "next-seo"
 type Props = {
   posts: [Post]
   categories: [Category]
@@ -17,8 +17,26 @@ type Props = {
 export default function Home({categories, posts, trending}: Props) {
   return (
     <div className="">
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Home',
+            item: '/',
+          },
+          {
+            position: 2,
+            name: 'Category',
+            item: '/#category',
+          },
+          {
+            position: 3,
+            name: 'About',
+            item: '/about',
+          },
+        ]}
+      />
       <Head>
-        <title>Clattery House</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

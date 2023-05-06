@@ -15,7 +15,8 @@ interface Post extends Base {
   title: string;
   description: string;
   titleDescription: string;
-  readingTime: number
+  readingTime: number;
+  publishedAt: string
 }
 
 interface Author extends Base {

@@ -31,7 +31,7 @@ export function ArticleContainer({
                 </Link>
                 
                 <span className="text-purple-700 font-bold">
-                    {post.author.name} • {dataToString(post._createdAt)}
+                    {post.author.name} • {dataToString(post.publishedAt)}
                 </span>
                 <p className="text-gray-600">
                     {post.titleDescription}

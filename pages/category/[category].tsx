@@ -1,8 +1,9 @@
 import Head from "next/head"
 import { Banner, CategoryBannerContent } from "../../components"
 import { CategoryPageContainer } from "../../containers"
-import { sanityClient } from "../../sanity"
+import { sanityClient, urlFor } from "../../sanity"
 import { groq } from "next-sanity"
+import { NextSeo } from "next-seo"
 
 type Props = {
     posts: [Post]
@@ -15,6 +16,22 @@ type Props = {
 function CategoryPage({posts, category}: Props) {
     return (
         <>
+        <NextSeo 
+                openGraph={{
+                    type: 'website',
+                    url: `/category/${category.title}`,
+                    title: category.title,
+                    description: category.description,
+                    images: [
+                        {
+                            url: urlFor(category.mainImage).url(),
+                            width: 800,
+                            height: 600,
+                            alt: category.title,
+                        },
+                    ],
+                }}
+        />
             <Head>
                 <title>{category.title}</title>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
